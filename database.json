@@ -47,6 +47,18 @@
       "fullName": "Mckenzie Rondeau",
       "email": "kenzie@gmail.com",
       "isStaff": true
+    },
+    {
+      "email": "thertz@yahoo.com",
+      "fullName": "Tricia Hertz",
+      "isStaff": false,
+      "id": 9
+    },
+    {
+      "email": "sallyS@yahoo.com",
+      "fullName": "Sally Sue",
+      "isStaff": false,
+      "id": 10
     }
   ],
   "customers": [
@@ -59,7 +71,7 @@
     {
       "id": 2,
       "address": "611 Arnoldo Key, AZ 82253-8001",
-      "phoneNumber": "449-696-6463",
+      "phoneNumber": "449-696-6577",
       "userId": 1
     },
     {
@@ -91,6 +103,18 @@
       "address": "28962 Langworth Summit, AZ 05571-1338",
       "phoneNumber": "522-579-7997",
       "userId": 4
+    },
+    {
+      "userId": 9,
+      "address": "3784 26th ave",
+      "phoneNumber": "374-484-2849",
+      "id": 8
+    },
+    {
+      "userId": 10,
+      "address": "837 2nd ave",
+      "phoneNumber": "243-558-3847",
+      "id": 9
     }
   ],
   "employees": [
@@ -214,6 +238,96 @@
       "id": 13,
       "color": "Gold",
       "type": "chunky"
+    }
+  ],
+  "customerOrders": [
+    {
+      "customerId": 1,
+      "description": "Red Leopard",
+      "tumblerSizeId": 4,
+      "glitterColorId": 6,
+      "personalization": "Marie",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Sep 19, 2022",
+      "id": 1
+    },
+    {
+      "customerId": 1,
+      "description": "Teacher pencil design",
+      "tumblerSizeId": 3,
+      "glitterColorId": 5,
+      "personalization": "Miss. Turner",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "2022-09-16T20:25:47.565Z",
+      "id": 2
+    },
+    {
+      "customerId": 5,
+      "description": "Dallas Cowboys ",
+      "tumblerSizeId": 2,
+      "glitterColorId": 5,
+      "personalization": "Jesse",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Sep 19, 2022",
+      "id": 3
+    },
+    {
+      "customerId": 1,
+      "description": "CoComelon",
+      "tumblerSizeId": 5,
+      "glitterColorId": 1,
+      "personalization": "Addy",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Sep 19, 2022",
+      "id": 4
+    },
+    {
+      "customerId": 1,
+      "description": "Teacher Design with apple",
+      "tumblerSizeId": 2,
+      "glitterColorId": 12,
+      "personalization": "Ms. Kep",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Tuesday, Sep 20, 2022",
+      "id": 6
+    },
+    {
+      "customerId": 8,
+      "description": "mama bear",
+      "tumblerSizeId": 3,
+      "glitterColorId": 5,
+      "personalization": "trish",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Tuesday, Sep 20, 2022",
+      "id": 7
+    },
+    {
+      "customerId": 8,
+      "description": "cocomelon",
+      "tumblerSizeId": 5,
+      "glitterColorId": 2,
+      "personalization": "kate",
+      "complete": false,
+      "claimed": false,
+      "dateCompleted": "",
+      "id": 8
+    },
+    {
+      "customerId": null,
+      "description": "Leopard print ",
+      "tumblerSizeId": 3,
+      "glitterColorId": 2,
+      "personalization": "Sally",
+      "complete": false,
+      "claimed": false,
+      "dateCompleted": "",
+      "id": 9
     }
   ]
 }
