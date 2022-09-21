@@ -15,7 +15,7 @@ export const OrderList = () => {
     useEffect(
         () => {
             if (completed){ 
-                const completedOrders = orders.filter(order => order.complete === true && order.customerId === tumblerUserObject.customerId)
+                const completedOrders = orders.filter(order => order.complete === true && order.userId === tumblerUserObject.id)
                 setFiltered(completedOrders)
             }
         },
@@ -37,7 +37,7 @@ export const OrderList = () => {
                 setEmployees(employeeArray)
             })
     },
-    []
+    [orders]
 )
 
 useEffect(
@@ -46,7 +46,7 @@ useEffect(
             setFiltered(orders)
         }
         else {
-            const myOrders = orders.filter(order => order.customerId === tumblerUserObject.customerId)
+            const myOrders = orders.filter(order => order.userId === tumblerUserObject.id)
             setFiltered(myOrders)
         }
     },
@@ -57,13 +57,13 @@ useEffect(
     () => {
         if(pendingOnly){
         const pendingTicketsArray = orders.filter(order => {
-            return order.customerId === tumblerUserObject.customerId && order.dateCompleted === ""
+            return order.userId === tumblerUserObject.id && order.dateCompleted === ""
         })
         setFiltered(pendingTicketsArray)
         
     }
     else {
-        const myOrders = orders.filter(order => order.customerId === tumblerUserObject.customerId)
+        const myOrders = orders.filter(order => order.userId === tumblerUserObject.id)
         setFiltered(myOrders)
     }
     },
@@ -87,7 +87,7 @@ return <>
 
 <article className="orders">
     {
-       filteredOrders.map(order => <Order key={`order--${order.id}`} emplpoyees={employees} getAllOrders={orders} currentUser={tumblerUserObject} id={order.id} orderObject={order} />)
+       filteredOrders.map(order => <Order key={`order--${order.id}`} employees={employees} getAllOrders={orders} currentUser={tumblerUserObject} id={order.id} orderObject={order} />)
     }
 </article>
 

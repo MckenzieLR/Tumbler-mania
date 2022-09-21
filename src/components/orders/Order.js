@@ -54,7 +54,7 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
                 method: "DELETE"
             })
             .then(() => {
-             
+                
             })
         }} className="ticket_delete"> Delete</button>
         }

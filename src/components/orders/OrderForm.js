@@ -21,13 +21,14 @@ export const OrderForm = () => {
     const tumblerUserObject = JSON.parse(localTumblerUser)
 
 
+
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
         // TODO: Create the object to be saved to the API
 
     const orderToSendToAPI = {
-        customerId: parseInt(customerId),
+        customerId: parseInt(customer[0].id),
         description: order.description,
         tumblerSizeId: parseInt(order.size),
         glitterColorId: parseInt(order.color),
@@ -51,11 +52,11 @@ export const OrderForm = () => {
             })
     }
 
-    const [customers, setCustomers] = useState([])
+    const [customer, setCustomers] = useState([])
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/customers`)
+            fetch(`http://localhost:8088/customers?userId=${tumblerUserObject.id}`)
             .then(res => res.json())
             .then((customerArray) => {
                 setCustomers(customerArray)
@@ -63,16 +64,18 @@ export const OrderForm = () => {
         }, []
     )
 
-    const findCustomerId = () => {
-        customers.map(
-            (customer) => {
-         ustomer.userId === tumblerUserObject.id
-        ?   return customer.id
-        : return "" 
-    }
+   // console.log(customer,"" )
+    // const findCustomerId = () => {
+    //     customers.map(
+    //         (customer) => {
+    //      if(customer.userId === tumblerUserObject.id){
+    //          return customer.id
+    //      }
+    //     })
+    // }
 
-
-    const customerId = findCustomerId()
+    // console.log("customer id",findCustomerId())
+    //const customerId = findCustomerId()
 
     const [colors, setColors] = useState([])
 
