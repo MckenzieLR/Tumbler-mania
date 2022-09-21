@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { Order } from "./Order"
 
 export const OrderList = () => {
@@ -12,18 +12,37 @@ export const OrderList = () => {
     const localTumblerUser = localStorage.getItem("tumbler_user")
     const tumblerUserObject = JSON.parse(localTumblerUser)
 
+
     useEffect(
         () => {
             if (completed){ 
-                const completedOrders = orders.filter(order => order.complete === true && order.userId === tumblerUserObject.id)
+                const completedOrders = orders.filter(order => order.complete === true && order.customerId === customer[0].id)
                 setFiltered(completedOrders)
             }
         },
         [completed]
     )
 
+    const [customer, setCustomers] = useState([{}])
+
+    // useEffect(
+    //     () => {
+    //         fetch(`http://localhost:8088/customers?userId=${tumblerUserObject.id}`)
+    //         .then(res => res.json())
+    //         .then((customerArray) => {
+    //             setCustomers(customerArray)
+    //         })
+    //     }, []
+    // )
+
     useEffect(
         () => {
+            fetch(`http://localhost:8088/customers?userId=${tumblerUserObject.id}`)
+            .then(res => res.json())
+            .then((customerArray) => {
+                setCustomers(customerArray)
+            })
+
             fetch(`http://localhost:8088/customerOrders?_embed=employeeTickets`)
                 .then(response => response.json())
                 .then((orderArray) => {
@@ -37,7 +56,7 @@ export const OrderList = () => {
                 setEmployees(employeeArray)
             })
     },
-    [orders]
+    []
 )
 
 useEffect(
@@ -46,7 +65,7 @@ useEffect(
             setFiltered(orders)
         }
         else {
-            const myOrders = orders.filter(order => order.userId === tumblerUserObject.id)
+            const myOrders = orders.filter(order => order.customerId === customer[0].id)
             setFiltered(myOrders)
         }
     },
@@ -57,13 +76,13 @@ useEffect(
     () => {
         if(pendingOnly){
         const pendingTicketsArray = orders.filter(order => {
-            return order.userId === tumblerUserObject.id && order.dateCompleted === ""
+            return order.customerId === customer[0].id && order.dateCompleted === ""
         })
         setFiltered(pendingTicketsArray)
         
     }
     else {
-        const myOrders = orders.filter(order => order.userId === tumblerUserObject.id)
+        const myOrders = orders.filter(order => order.customerId === customer[0].id)
         setFiltered(myOrders)
     }
     },

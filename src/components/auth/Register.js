@@ -61,7 +61,7 @@ const localTumblerUser = localStorage.getItem("tumbler_user")
       })
 
     .then((res) => res.json())
-    .then(navigate("/"))
+    .then(navigate("/home"))
 }
 
   const handleRegister = (e) => {
