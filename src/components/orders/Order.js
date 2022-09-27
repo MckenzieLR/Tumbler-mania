@@ -1,5 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom"
 
+
 export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => {
 
     const localTumblerUser = localStorage.getItem("tumbler_user")
@@ -17,7 +18,7 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
 
     const CompleteTicket = () => {
         if (currentUser.staff &&  orderObject.dateCompleted === "") {
-            return <button onClick={CompletedTicket} className="order_completed"> Completed</button>
+            return <button onClick={CompletedTicket} className="order_completed button-62 btn-primary"> Completed</button>
         }
         else {
             return ""
@@ -44,7 +45,7 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
             body: JSON.stringify(copy)
         })
         .then(response => response.json())
-        .then()
+        .then(() => getAllOrders())
     }
 
     const deleteButton = () => {
@@ -53,10 +54,8 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
             fetch(`http://localhost:8088/customerOrders/${orderObject.id}`, {
                 method: "DELETE"
             })
-            .then(() => {
-                
-            })
-        }} className="ticket_delete"> Delete</button>
+            .then(() => getAllOrders() )
+        }} className="ticket_delete button-62 btn-primary"> Delete</button>
         }
         else {
             return ""
@@ -67,7 +66,7 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
 
     const editButton = () => {
         if(!currentUser.staff && orderObject.dateCompleted === ""){
-            return <button onClick={() => navigate(`/order/edit/${orderObject.id}`)}>Edit Order</button>
+            return <button className="button-62 btn-primary" onClick={() => navigate(`/order/edit/${orderObject.id}`)}>Edit Order</button>
         }
     }
 

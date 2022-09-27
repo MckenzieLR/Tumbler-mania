@@ -17,8 +17,8 @@ export const EmployeeNav = () => {
             </li>
             {
                 localStorage.getItem("tumbler_user")
-                    ? <li className="navbar__item navbar__logout">
-                        <Link className="navbar__link" to="" onClick={() => {
+                    ? <li className="navbar__item ">
+                        <Link className="navbar__link employee__logout" to="" onClick={() => {
                             localStorage.removeItem("tumbler_user")
                             navigate("/", {replace: true})
                         }}>Logout</Link>

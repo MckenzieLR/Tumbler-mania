@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Customer } from "./CustomerAccount"
+import "./accounts.css"
 
 
 export const CustomerList = () => {

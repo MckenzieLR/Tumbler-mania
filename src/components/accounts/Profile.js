@@ -31,8 +31,8 @@ export const CustomerProfile = () =>{
                     <div> Address: {customer.address}</div>
                     <div> Phone Number: {customer.phoneNumber}</div>
                 </section>
-                <button onClick={() => navigate("/account/edit")}>Edit Account</button>
-                <button onClick={() => navigate("/orders")}>Show Orders</button>
+                <button className="button-62" onClick={() => navigate("/account/edit")}>Edit Account</button>
+                <button className="button-62" onClick={() => navigate("/orders")}>Show Orders</button>
             </>
 }
 

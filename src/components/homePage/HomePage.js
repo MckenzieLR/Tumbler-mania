@@ -31,49 +31,111 @@ return <>
 {
     tumblerUserObject.staff 
     ? <>
-       <div> 
-           <img src={coffeemug} alt="Aztec Coffee Mug" />
-    <img src={turqskinny} alt="Aztec Turq. Wrap" />
-    <img src={baseballHitSteal} alt="Baseball Hit and Steal" />
-    <img src={baseballMom} alt="Baseball Mom" />
-    <img src={blessedmama} alt="Blessed Mama Bear" />
-    <img src={blueGeode} alt="Blue Geode" />
-    <img src={caffeieneQueen} alt="Caffeiene Queen" />
-    <img src={canAm} alt="Can-Am Koozie" />
-    <img src={leopardKoozie} alt="Leopard Koozie" />
-    <img src={seams} alt="Baseball Living Life by the Seams" />
-    <img src={Mamamini} alt="Mama Mini Set" />
-    <img src={turqMamaBear} alt="Mama Bear" />
-    <img src={MinnieMouse} alt="Minnie Mouse Sippy" />
-    <img src={Pencil} alt="Pencil Design" />
-    <img src={pendelton} alt="Full Pendleton Design" />
-    <img src={Teacheroffduty} alt="Teacher Off Duty" />
-    <img src={UnicornBabyshark} alt="Unicorn (left) Baby Shark (Right)" />
-    </div> 
+       <div className="home-page">
+        
+        <div className="mom-tumblers">
+            <h3 className="mom-header">Mom Tumblers</h3>
+            <div  className="mom-imgs">
+            <img src={blessedmama} alt="Blessed Mama Bear" />
+            <img src={Mamamini} alt="Mama Mini Set" />
+            <img src={turqMamaBear} alt="Mama Bear" />
+            <img src={baseballHitSteal} alt="Baseball Hit and Steal" />
+            <img src={baseballMom} alt="Baseball Mom" />
+            <img src={seams} alt="Baseball Living Life by the Seams" />
+            </div>
+        </div>
+    <div className="can-coolers">
+        <h3 className="cooler-header">Can Coolers</h3> 
+        <div className="cooler-imgs">
+        <img src={canAm} alt="Can-Am Koozie" />
+        <img src={leopardKoozie} alt="Leopard Koozie" />
+        </div>
+    </div>
+    <div className="teacher-tumblers">
+        <h3 className="teacher-header">Teacher Tumblers</h3>
+        <div className="teacher-imgs">
+        <img src={Pencil} alt="Pencil Design" />
+        <img src={Teacheroffduty} alt="Teacher Off Duty" />
+        </div>
+    </div>
+    <div className="kid-tumblers">
+        <h3 className="kid-header">Kid Tumblers</h3> 
+        <div className="kids-imgs">
+        <img src={MinnieMouse} alt="Minnie Mouse Sippy" />
+        <img src={UnicornBabyshark} alt="Unicorn (left) Baby Shark (Right)" />
+        </div>
+    </div>
+    <div className="aztec-tumblers">
+        <h3 className="aztec-header"> Aztec Print Tumblers</h3>
+        <div className="aztec-imgs">
+        <img src={coffeemug} alt="Aztec Coffee Mug" />
+        <img src={turqskinny} alt="Aztec Turq. Wrap" />
+        <img src={pendelton} alt="Full Pendleton Design" />
+        </div>
+    </div>
+    <div className="misc-tumblers">
+        <h3 className="misc-header">Misc Tumblers</h3> 
+        <div className="misc-imgs">
+        <img src={blueGeode} alt="Blue Geode" />
+        <img src={caffeieneQueen} alt="Caffeiene Queen" />
+        </div>
+    </div>
+</div> 
     </>
     : <>
-    <div>
-        <div className="order-button">
-    <button onClick={()=> Navigate("/order/create")}>Start Order</button>
+    <div className="order-button">
+    <button className="button-62" onClick={()=> Navigate("/order/create")}>Start Order</button>
     </div>
-    <img src={coffeemug} alt="Aztec Coffee Mug" />
-    <img src={turqskinny} alt="Aztec Turq. Wrap" />
-    <img src={baseballHitSteal} alt="Baseball Hit and Steal" />
-    <img src={baseballMom} alt="Baseball Mom" />
-    <img src={blessedmama} alt="Blessed Mama Bear" />
-    <img src={blueGeode} alt="Blue Geode" />
-    <img src={caffeieneQueen} alt="Caffeiene Queen" />
-    <img src={canAm} alt="Can-Am Koozie" />
-    <img src={leopardKoozie} alt="Leopard Koozie" />
-    <img src={seams} alt="Baseball Living Life by the Seams" />
-    <img src={Mamamini} alt="Mama Mini Set" />
-    <img src={turqMamaBear} alt="Mama Bear" />
-    <img src={MinnieMouse} alt="Minnie Mouse Sippy" />
-    <img src={Pencil} alt="Pencil Design" />
-    <img src={pendelton} alt="Full Pendleton Design" />
-    <img src={Teacheroffduty} alt="Teacher Off Duty" />
-    <img src={UnicornBabyshark} alt="Unicorn (left) Baby Shark (Right)" />
-    </div>
+    <div className="home-page">
+        
+            <div className="mom-tumblers">
+                <h3 className="mom-header">Mom Tumblers</h3>
+                <div  className="mom-imgs">
+                <img src={blessedmama} alt="Blessed Mama Bear" /> 
+                <img src={Mamamini} alt="Mama Mini Set" />
+                <img src={turqMamaBear} alt="Mama Bear" />
+                <img src={baseballHitSteal} alt="Baseball Hit and Steal" />
+                <img src={baseballMom} alt="Baseball Mom" />
+                <img src={seams} alt="Baseball Living Life by the Seams" />
+                </div>
+            </div>
+        <div className="can-coolers">
+            <h3 className="cooler-header">Can Coolers</h3> 
+            <div className="cooler-imgs">
+            <img src={canAm} alt="Can-Am Koozie" />
+            <img src={leopardKoozie} alt="Leopard Koozie" />
+            </div>
+        </div>
+        <div className="teacher-tumblers">
+            <h3 className="teacher-header">Teacher Tumblers</h3>
+            <div className="teacher-imgs">
+            <img src={Pencil} alt="Pencil Design" />
+            <img src={Teacheroffduty} alt="Teacher Off Duty" />
+            </div>
+        </div>
+        <div className="kid-tumblers">
+            <h3 className="kid-header">Kid Tumblers</h3> 
+            <div className="kids-imgs">
+            <img src={MinnieMouse} alt="Minnie Mouse Sippy" />
+            <img src={UnicornBabyshark} alt="Unicorn (left) Baby Shark (Right)" />
+            </div>
+        </div>
+        <div className="aztec-tumblers">
+            <h3 className="aztec-header"> Aztec Print Tumblers</h3>
+            <div className="aztec-imgs">
+            <img src={coffeemug} alt="Aztec Coffee Mug" />
+            <img src={turqskinny} alt="Aztec Turq. Wrap" />
+            <img src={pendelton} alt="Full Pendleton Design" />
+            </div>
+        </div>
+        <div className="misc-tumblers">
+            <h3 className="misc-header">Misc Tumblers</h3> 
+            <div className="misc-imgs">
+            <img src={blueGeode} alt="Blue Geode" />
+            <img src={caffeieneQueen} alt="Caffeiene Queen" />
+            </div>
+        </div>
+    </div> 
     </>
 
 }

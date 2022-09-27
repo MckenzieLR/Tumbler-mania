@@ -10,39 +10,30 @@ export const Register = (props) => {
   let navigate = useNavigate();
 
   const registerNewUser = () => {
-
-    // const userToSendToAPI = {
-    //     email: user.email,
-    //     fullName: user.fullName,
-    //     isStaff: false
-    // }
-
-    // const customerToSendToAPI = {
-    //     address: customer.address,
-    //     phoneNumber: customer.phoneNumber
-    // }
-
     return fetch("http://localhost:8088/users", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
     })
-        .then(res => res.json())
-        .then(createdUser => {
-            if (createdUser.hasOwnProperty("id")) {
-                localStorage.setItem("tumbler_user", JSON.stringify({
-                    id: createdUser.id,
-                    staff: createdUser.isStaff
-                }))
+      .then((res) => res.json())
+      .then((createdUser) => {
+        if (createdUser.hasOwnProperty("id")) {
+          localStorage.setItem(
+            "tumbler_user",
+            JSON.stringify({
+              id: createdUser.id,
+              staff: createdUser.isStaff,
+            })
+          );
 
-               registerNewCustomer(createdUser.id)
-            }
-        })
-}
-const localTumblerUser = localStorage.getItem("tumbler_user")
-    const tumblerUserObject = JSON.parse(localTumblerUser)
+          registerNewCustomer(createdUser.id);
+        }
+      });
+  };
+  const localTumblerUser = localStorage.getItem("tumbler_user");
+  const tumblerUserObject = JSON.parse(localTumblerUser);
 
   const [customer, setCustomer] = useState({
     userId: 0,
@@ -51,18 +42,17 @@ const localTumblerUser = localStorage.getItem("tumbler_user")
   });
 
   const registerNewCustomer = (userId) => {
-      customer.userId = userId
+    customer.userId = userId;
     return fetch("http://localhost:8088/customers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(customer)
-      })
-
-    .then((res) => res.json())
-    .then(navigate("/home"))
-}
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(customer),
+    })
+      .then((res) => res.json())
+      .then(navigate("/home"));
+  };
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -98,7 +88,7 @@ const localTumblerUser = localStorage.getItem("tumbler_user")
           Please Register for Tumbler Mania
         </h1>
         <fieldset>
-          <label htmlFor="fullName"> Full Name </label>
+          <label className="formName" htmlFor="fullName"> Full Name </label>
           <input
             onChange={updateUser}
             type="text"
@@ -110,7 +100,7 @@ const localTumblerUser = localStorage.getItem("tumbler_user")
           />
         </fieldset>
         <fieldset>
-          <label htmlFor="email"> Email address </label>
+          <label className="formName" htmlFor="email"> Email address </label>
           <input
             onChange={updateUser}
             type="email"
@@ -121,7 +111,7 @@ const localTumblerUser = localStorage.getItem("tumbler_user")
           />
         </fieldset>
         <fieldset>
-          <label htmlFor="address"> Address </label>
+          <label className="formName" htmlFor="address"> Address </label>
           <input
             onChange={updateCustomer}
             type="address"
@@ -132,7 +122,7 @@ const localTumblerUser = localStorage.getItem("tumbler_user")
           />
         </fieldset>
         <fieldset>
-          <label htmlFor="phoneNumber"> Phone Number </label>
+          <label className="formName" htmlFor="phoneNumber"> Phone Number </label>
           <input
             onChange={updateCustomer}
             type="phoneNumber"
@@ -152,40 +142,36 @@ const localTumblerUser = localStorage.getItem("tumbler_user")
             type="checkbox"
             id="isStaff"
           />
-          <label htmlFor="email"> I am an employee </label>
+          <label className="formName" htmlFor="email"> I am an employee </label>
         </fieldset>
         <fieldset>
-          <button type="submit"> Register </button>
+          <button className="button-62 btn-primary" type="submit">
+            {" "}
+            Register{" "}
+          </button>
         </fieldset>
       </form>
     </main>
-  )
-        
-        }
+  );
+};
 
-
-
-
-
-
-
-    //     return 
-    //     fetch("http://localhost:8088/users", {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify(user),
-    //     })
-    //      .then((res) => res.json())
-    //       .then(createdUser => {
-    //           if (createdUser.hasOwnProperty("id")) {
-    //               localStorage.setItem("tumbler_user", JSON.stringify({
-    //                   id: createdUser.id,
-    //                   staff: createdUser.isStaff
-    //               }))
-    //       .then(
-    //         (user) => {
-    //           customerToSendToAPI.userId = user.id;
-    //         })
-    //   }
+//     return
+//     fetch("http://localhost:8088/users", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(user),
+//     })
+//      .then((res) => res.json())
+//       .then(createdUser => {
+//           if (createdUser.hasOwnProperty("id")) {
+//               localStorage.setItem("tumbler_user", JSON.stringify({
+//                   id: createdUser.id,
+//                   staff: createdUser.isStaff
+//               }))
+//       .then(
+//         (user) => {
+//           customerToSendToAPI.userId = user.id;
+//         })
+//   }

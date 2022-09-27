@@ -1,0 +1,103 @@
+.orderForm {
+    background-color: #EF4765;
+    border:  #FF9A5A solid 5px;
+    border-radius: 12px;
+    color:  #FFFFFF;
+    font-family: Shadows Into Light;
+    font-size:larger;
+    align-items: center;
+    margin: 15px;
+    padding: 7px;
+}
+
+.orderForm_title {
+    font-size: 1rem;
+}
+
+.btn-primary {
+    border: #FFFFFF 2px solid;
+}
+
+.sizeSelect {
+    border-radius: 12px;
+    margin-left: 10px;
+    font-family: Rancho;
+    font-size: medium;
+}
+
+.glitterSelect {
+    border-radius: 12px;
+    margin-left: 10px;
+    font-family: Rancho;
+    font-size: medium;
+}
+
+.form-control {
+    border-radius: 12px;
+    margin-left: 10px;
+    font-family: Rancho;
+    font-size: medium;
+    
+}
+
+fieldset {
+    border: 3px dotted #FF9A5A;
+    margin: 5px;
+}
+
+.formName {
+    font-weight:bold;
+    letter-spacing: 1px;
+}
+
+/* .orders {
+    background-color: #EF4765;
+    border-radius: 12px;
+    color:  #FFFFFF;
+    font-family: Shadows Into Light;
+    font-size:larger;
+    align-items: center;
+    margin: 30px 15px;
+    
+    padding: 7px;
+    -webkit-box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+    red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+    red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+} */
+
+.order {
+    
+    background-color: #EF4765;
+    border-radius: 12px;
+    color:  #FFFFFF;
+    font-family: Shadows Into Light;
+    font-size:larger;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    width: 85%;
+    align-items: center;
+    margin: 30px 15px;
+    padding: 7px;
+    -webkit-box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+    red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+    red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.ordersHeader {
+    color:  #FFFFFF;
+    font-family: Shadows Into Light;
+    font-size: 2rem;
+    margin: 10px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+/* .allOrders {
+    display: flex;
+    flex-direction: wrap;
+} */
+
+
+

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Pacifico&family=Rancho&display=swap|Rancho');
+
+
+.header-tumbler-mania {
+    font-family:Rancho;
+    font-size: 3rem;
+    margin: 13px 15px;
+
+    color:#EF4765;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #fff6f8, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+
+
+}
+

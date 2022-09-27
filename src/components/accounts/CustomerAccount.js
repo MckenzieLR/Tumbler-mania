@@ -25,7 +25,7 @@ export const Customer = ({id, fullName, address, phoneNumber}) =>{
                     <div> Address: {address}</div>
                     <div> Phone Number: {phoneNumber}</div>
                 </section>
-                <button onClick={() => navigate("/account/edit")}>Edit Account</button>
+                <button className="button-62" onClick={() => navigate("/account/edit")}>Edit Account</button>
             </>
     }
     </>

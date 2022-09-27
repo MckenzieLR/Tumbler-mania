@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Pacifico&family=Rancho&display=swap|Rancho');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
+  background: #fff;
+  transition: 3s;
+
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 18px 0;
+  background-size: 400% 400%;
+  background-image: linear-gradient(-45deg, #ff5959, #ff4040, #ff0d6e, #ff8033,#d74177);
+  animation: 12s myGradient infinite;
+  border-radius: 40px;
+  box-shadow: 3px 3px 20px #ff3352;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  width: 100%;
+}
+
+@keyframes myGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  
+  50%{
+    background-position: 100% 50%;
+  }
+  
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.active {
+  transition: 1s;
+}
+
+.active:hover {
+    color: #fff;
+    animation: 1.5s myFlash linear infinite;
+    text-shadow: 2px 2px 30px #fff;
+    transition: 2s;
+  }
+
+li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 45px 45px;
+  font-family: Rancho;
+  font-weight: lighter;
+  font-size: 24px;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+
+
+
+
+.navigation {
+    width: 100%;
+  transition: 3s;
+  animation: 3s myAnimation ease linear;
+}
+
+@keyframes myFlash {
+    0% {
+      opacity: 1;
+      text-shadow: transparent;
+    }
+    
+    50% {
+      opacity: .1;
+    }
+    
+    100% {
+      opacity: 1;
+      text-shadow: 2px 2px 20px #fff;
+    }
+  }
+
+@keyframes myAnimation {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav-type {
+  animation: 3s myWorld ease linear;
+}
+
+@keyframes myWorld {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+@media(max-width: 767px) {
+  .flash-GIF {
+    display: none;
+  }
+  
+  .line-w5 {
+    display: none;
+  }
+  
+
+  
+  .radial-cyrcle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: tomato;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 50%;
+    box-shadow: 2px 2px 20px #ff3352;
+    background-image: linear-gradient(to top, #ff2657, #ff3333, #ff5900);
+  }
+}
+
+.line {
+  height: 40px;
+  width: 2px;
+  background: #fff;
+  margin: 0;
+  position: absolute;
+  left: 88%;
+  top: 25%;
+} 
+
+
+.text-content-fluid {
+  display: flex;
+
+  transform: translate(-50%, -50%);
+  top: 53%;
+  left: 50%;
+  letter-spacing: 25px;
+  font-size: 50px;
+  font-family: verdana;
+} 
+
+
+
+
+
+
+
+
+
+ /* @media(max-width: 767px) {
+  .text-content-fluid {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 60%;
+  }
+} */
+
+
+
+/*Ideal screen pixel 1317px*/
+
+
+/* @keyframes myLineargradient {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 2px 3px 20px #ff1700;
+  }
+  
+  50% {
+    background-position: 100% 50%;
+     box-shadow: none;
+  }
+  
+  100% {
+    background-position: 0% 50%;
+     box-shadow: 2px 3px 20px #ff1700;
+  }
+} */
+
+/*top: 71%*/
+
+
+
+/* .Active {
+  transition: 2s;
+  margin-top: 1px;
+}  */

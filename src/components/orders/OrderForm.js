@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-
+import "./orders.css"
 export const OrderForm = () => {
 
 
@@ -106,7 +106,7 @@ export const OrderForm = () => {
             <h2 className="orderForm__title">New Tumbler Order</h2>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="description">Description:</label>
+                    <label className="formName" htmlFor="description">Description:</label>
                     <textarea
                         required autoFocus
                         type="text"
@@ -124,8 +124,8 @@ export const OrderForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                <label htmlFor="type">Glitter Color</label>
-                    <select value={order.color}
+                <label className="formName" htmlFor="type">Glitter Color</label>
+                    <select className="glitterSelect" value={order.color}
                         onChange={
                             (evt) => {
                                 const copy = {...order}
@@ -147,8 +147,8 @@ export const OrderForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                <label htmlFor="type">Tumbler Size</label>
-                    <select value={order.size}
+                <label className="formName" htmlFor="type">Tumbler Size</label>
+                    <select className="sizeSelect" value={order.size}
                         onChange={
                             (evt) => {
                                 const copy = {...order}
@@ -171,7 +171,7 @@ export const OrderForm = () => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="personalization">Personalization:</label>
+                    <label className="formName" htmlFor="personalization">Personalization:</label>
                     <input
                         required autoFocus
                         type="text"
@@ -189,7 +189,7 @@ export const OrderForm = () => {
             </fieldset>
             <button 
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                className="btn btn-primary">
+                className="btn btn-primary button-62">
                 Submit Order
             </button>
         </form>

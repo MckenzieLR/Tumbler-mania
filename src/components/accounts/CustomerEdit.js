@@ -66,8 +66,8 @@ useEffect(() => {
             <h2 className="account__title">Edit Account</h2>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="address">Address:</label>
-                    <input
+                    <label className="formName addressBox" htmlFor="address">Address:</label>
+                    <textarea
                         required autoFocus
                         type="text"
                         className="form-control"
@@ -83,7 +83,7 @@ useEffect(() => {
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="name">Phone Number:</label>
+                    <label className="formName" htmlFor="name">Phone Number:</label>
                     <input type="text"
                         className="form-control"
                         value={account.phoneNumber}
@@ -98,7 +98,7 @@ useEffect(() => {
             </fieldset>
             <button
                 onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
-                className="btn btn-primary">
+                className="btn btn-primary button-62">
                 Save Account
             </button>
         </form>

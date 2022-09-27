@@ -6,6 +6,7 @@ import { Order } from "../orders/Order"
 import { EditOrderForm } from "../orders/OrderEdit"
 import { OrderForm } from "../orders/OrderForm"
 import { OrderList } from "../orders/OrderList"
+import "./views.css"
 
 
 
@@ -16,8 +17,8 @@ export const CustomerViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>Tumbler Mania</h1>
-                    <div>Your one-stop shop for all your custom tumbler needs</div>
+                    <h1 className="header-tumbler-mania">Tumbler Mania</h1>
+                    {/* <div>Your one-stop shop for all your custom tumbler needs</div> */}
 
                     <Outlet />
                 </>

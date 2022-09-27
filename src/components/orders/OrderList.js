@@ -25,15 +25,14 @@ export const OrderList = () => {
 
     const [customer, setCustomers] = useState([{}])
 
-    // useEffect(
-    //     () => {
-    //         fetch(`http://localhost:8088/customers?userId=${tumblerUserObject.id}`)
-    //         .then(res => res.json())
-    //         .then((customerArray) => {
-    //             setCustomers(customerArray)
-    //         })
-    //     }, []
-    // )
+    const getAllOrders = () => {
+        fetch(`http://localhost:8088/customerOrders?_embed=employeeTickets`)
+        .then(response => response.json())
+        .then((orderArray) => {
+            setOrders(orderArray)
+
+        })
+    }
 
     useEffect(
         () => {
@@ -43,12 +42,7 @@ export const OrderList = () => {
                 setCustomers(customerArray)
             })
 
-            fetch(`http://localhost:8088/customerOrders?_embed=employeeTickets`)
-                .then(response => response.json())
-                .then((orderArray) => {
-                    setOrders(orderArray)
-
-                })
+          getAllOrders()
 
             fetch(`http://localhost:8088/employees?_expand=user`)
             .then(response => response.json())
@@ -89,26 +83,32 @@ useEffect(
     [pendingOnly]
 )
 
+
+
+
 return <> 
 {
     tumblerUserObject.staff
     ? ""
     : <>
-     <button onClick={() => {
+     <button className="button-62" onClick={() => {
          setCompleted(false)
          updatePendingOnly(false)}}>All Orders</button>
-    <button onClick={() => updatePendingOnly(!pendingOnly)}>Pending Orders</button>
-    <button onClick={() => setCompleted(!completed)}>Previous Orders</button>
+    <button className="button-62" onClick={() => updatePendingOnly(!pendingOnly)}>Pending Orders</button>
+    <button className="button-62" onClick={() => setCompleted(!completed)}>Previous Orders</button>
     </>
 }
 
-<h2>Orders</h2>
+
+<h2 className="ordersHeader">Orders</h2>
+
 
 <article className="orders">
     {
-       filteredOrders.map(order => <Order key={`order--${order.id}`} employees={employees} getAllOrders={orders} currentUser={tumblerUserObject} id={order.id} orderObject={order} />)
+       filteredOrders.map(order => <Order key={`order--${order.id}`} employees={employees} getAllOrders={getAllOrders} currentUser={tumblerUserObject} id={order.id} orderObject={order} />)
     }
 </article>
+
 
 </>
 

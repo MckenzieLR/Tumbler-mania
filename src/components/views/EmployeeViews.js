@@ -13,8 +13,8 @@ export const EmployeeViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>Tumbler Mania</h1>
-                    <div>Your one-stop shop for all your custom tumbler needs</div>
+                    <h1 className="header-tumbler-mania">Tumbler Mania</h1>
+                    {/* <div className="">Your one-stop shop for all your custom tumbler needs</div> */}
 
                     <Outlet />
                 </>

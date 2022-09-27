@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom"
+import "./login.css"
 
 
 export const Login = () => {
@@ -32,11 +33,12 @@ export const Login = () => {
     return (
         <main className="container--login">
             <section>
+            <h1 className="loginHeader">Tumbler Mania</h1>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Tumbler Mania</h1>
+                    
                     <h2>Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address </label>
+                        <label className="formName"  htmlFor="inputEmail"> Email address </label>
                         <input type="email"
                             value={email}
                             onChange={evt => set(evt.target.value)}
@@ -45,7 +47,7 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button className="button-62 btn-primary" type="submit">
                             Sign in
                         </button>
                     </fieldset>
