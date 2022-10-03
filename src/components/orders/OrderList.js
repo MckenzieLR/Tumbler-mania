@@ -8,6 +8,9 @@ export const OrderList = () => {
     const [employees, setEmployees] = useState([])
     const [completed, setCompleted] = useState(false)
     const [pendingOnly, updatePendingOnly] = useState(false)
+    const [claimedOnly, updateClaimedOnly] = useState(false)
+    const [employeePendingOnly, updateEmployeePendingOnly] = useState(false)
+    const [employeeCompleted, setEmployeeCompleted] = useState(false)
     const navigate = useNavigate()
     const localTumblerUser = localStorage.getItem("tumbler_user")
     const tumblerUserObject = JSON.parse(localTumblerUser)
@@ -83,13 +86,67 @@ useEffect(
     [pendingOnly]
 )
 
+useEffect(
+    () => {
+        if(claimedOnly){
+        const claimedTicketsArray = orders.filter(order => {
+            return order.claimed === true
+        })
+        setFiltered(claimedTicketsArray)
+        
+    }
+    else {
+        const allOrders = orders
+        setFiltered(allOrders)
+    }
+    },
+    [claimedOnly]
+)
+
+useEffect(
+    () => {
+        if (employeeCompleted){ 
+            const employeeCompletedOrders = orders.filter(order => order.complete === true)
+            setFiltered(employeeCompletedOrders)
+        }
+        else {
+            const allOrders = orders
+            setFiltered(allOrders)
+        }
+    },
+    [employeeCompleted]
+)
+
+useEffect(
+    () => {
+        if(employeePendingOnly){
+        const EmployeePendingTicketsArray = orders.filter(order => {
+            return order.dateCompleted === "" && order.claimed === false
+        })
+        setFiltered(EmployeePendingTicketsArray)
+    }
+    else {
+        const allOrders = orders
+        setFiltered(allOrders)
+    }
+    },
+    [employeePendingOnly]
+)
 
 
 
 return <> 
 {
     tumblerUserObject.staff
-    ? ""
+    ? <>
+         <button className="button-62" onClick={() => {
+         setEmployeeCompleted(false)
+         updateEmployeePendingOnly(false)
+         updateClaimedOnly(false)}}>All Orders</button>
+    <button className="button-62" onClick={() => updateEmployeePendingOnly(!employeePendingOnly)}>Pending Orders</button>
+    <button className="button-62" onClick={() => updateClaimedOnly(!claimedOnly)}>Claimed Orders</button>
+    <button className="button-62" onClick={() => setEmployeeCompleted(!completed)}>Completed Orders</button>
+    </>
     : <>
      <button className="button-62" onClick={() => {
          setCompleted(false)
@@ -101,7 +158,6 @@ return <>
 
 
 <h2 className="ordersHeader">Orders</h2>
-
 
 <article className="orders">
     {

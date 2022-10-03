@@ -1,3 +1,4 @@
+import { findAllByTestId } from "@testing-library/react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 
 
@@ -15,6 +16,39 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
         const orderEmployeeRelationship = orderObject.employeeTickets[0]
         assignedEmployee = employees.find(employee => employee.id === orderEmployeeRelationship.employeeId)
     }
+
+    const ClaimTicket = () => {
+        if (currentUser.staff &&  orderObject.claimed === false) {
+            return <button onClick={ClaimedTicket} className="order_completed button-62 btn-primary"> Claim</button>
+        }
+        else {
+            return ""
+        }
+    }
+
+    const ClaimedTicket = () => {
+        const copy = {
+            customerId: parseInt(orderObject.customerId),
+            description: orderObject.description,
+            tumblerSizeId: parseInt(orderObject.tumblerSizeId),
+            glitterColorId: parseInt(orderObject.glitterColorId),
+            personalization: orderObject.personalization,
+            complete: false,
+            claimed: true,
+            dateCompleted: ""
+        }
+
+        return fetch(`http://localhost:8088/customerOrders/${orderObject.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(copy)
+        })
+        .then(response => response.json())
+        .then(() => getAllOrders())
+    }
+
 
     const CompleteTicket = () => {
         if (currentUser.staff &&  orderObject.dateCompleted === "") {
@@ -65,7 +99,7 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
     }
 
     const editButton = () => {
-        if(!currentUser.staff && orderObject.dateCompleted === ""){
+        if(!currentUser.staff && orderObject.dateCompleted === "" && orderObject.claimed === false){
             return <button className="button-62 btn-primary" onClick={() => navigate(`/order/edit/${orderObject.id}`)}>Edit Order</button>
         }
     }
@@ -78,15 +112,23 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
     <section> Date Completed: {orderObject.dateCompleted }</section>
     <footer> 
         {
-            currentUser.staff
+            currentUser.staff && orderObject.claimed === false
             ? <>
-            {CompleteTicket()}
+            {ClaimTicket()}
             {deleteButton()}
             </>
             : <>{editButton()}
             </>
         }
+        {
+            currentUser.staff && orderObject.claimed === true
+            ? <>
+            {CompleteTicket()}
+            </>
+            : ""
+        }
     </footer>
 </section>
 }
+
 

@@ -2,10 +2,12 @@
 
 img {
   width: 100px;
-
   margin: 5px;
-  border: 2px solid #ffffff;
   border-radius: 4px;
+  -webkit-box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+  red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+box-shadow: #fff 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px,
+  red 0 -18px 40px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .order-button {
@@ -77,5 +79,84 @@ img {
   flex-direction: row;
   flex-wrap: wrap;
   margin-left: 5px;
+} 
+
+.mom-imgs, .cooler-imgs, .teacher-imgs, .kids-imgs, .aztec-imgs, .misc-imgs {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  padding: 5px;
+  gap: 1em;
 }
 
+.geode, .caffeine-queen {
+  height: 200px;
+}
+
+.teacher-set {
+  height: 170px;
+  width: 150px;
+}
+
+
+
+/* .card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  width: 500px;
+  gap: 1rem;
+  margin: 20px 20px 20px 45px;
+  padding: 30px;
+} */
+
+
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: #ff9a5a;
+  height: 200px;
+  width: 100px;
+  transform: perspective(1000px) rotateY(var(--rotatate-y, 0))
+      translateY(var(--translate-y, 0));
+  transform-style: preserve-3d;
+  transition: 150ms;
+  background-color: #ff995a9e;
+  margin: 20px 10px;
+}
+
+.card:hover{
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(255, 176, 72, 0.643);
+  opacity: 1;
+}
+
+.card.flip{
+  --rotate-y: 180deg;
+}
+
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 5px;
+
+}
+
+.back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.flip {
+  transform: rotateY(180deg);
+} 
