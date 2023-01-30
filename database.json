@@ -59,13 +59,43 @@
       "fullName": "Sally Sue",
       "isStaff": false,
       "id": 10
+    },
+    {
+      "email": "lisa@gmail.com",
+      "fullName": "Lisa",
+      "isStaff": false,
+      "id": 11
+    },
+    {
+      "email": "kyoung@yahoo.com",
+      "fullName": "Kate Young",
+      "isStaff": false,
+      "id": 12
+    },
+    {
+      "email": "kherd@yahoo.com",
+      "fullName": "Keith herd",
+      "isStaff": false,
+      "id": 13
+    },
+    {
+      "email": "htrotter@gmail.com",
+      "fullName": "Haylee Trotter",
+      "isStaff": false,
+      "id": 14
+    },
+    {
+      "email": "kenz@gmail.com",
+      "fullName": "Kenzie",
+      "isStaff": false,
+      "id": 15
     }
   ],
   "customers": [
     {
       "id": 1,
-      "address": "06146 Aracely Roads, GA 12986-7752",
-      "phoneNumber": "872-485-8378",
+      "address": "06146 Aracely Roads, GA 12986-7742",
+      "phoneNumber": "872-485-8589",
       "userId": 2
     },
     {
@@ -115,6 +145,36 @@
       "address": "837 2nd ave",
       "phoneNumber": "243-558-3847",
       "id": 9
+    },
+    {
+      "userId": 11,
+      "address": "2839 4th ave s ",
+      "phoneNumber": "483-948-3948",
+      "id": 10
+    },
+    {
+      "userId": 12,
+      "address": "8273 6th Ave ",
+      "phoneNumber": "837-282-8438",
+      "id": 11
+    },
+    {
+      "userId": 13,
+      "address": "368 36th Ave",
+      "phoneNumber": "374-383-4843",
+      "id": 12
+    },
+    {
+      "userId": 14,
+      "address": "393 43rd Ave N",
+      "phoneNumber": "284-294-3938",
+      "id": 13
+    },
+    {
+      "userId": 15,
+      "address": "2739 93rd ave ",
+      "phoneNumber": "387-383-4839",
+      "id": 14
     }
   ],
   "employees": [
@@ -243,13 +303,13 @@
   "customerOrders": [
     {
       "customerId": 1,
-      "description": "Red Leopard",
+      "description": "Red Leopard Full",
       "tumblerSizeId": 4,
       "glitterColorId": 6,
       "personalization": "Marie",
       "complete": true,
       "claimed": true,
-      "dateCompleted": "Monday, Sep 19, 2022",
+      "dateCompleted": "Monday, Oct 3, 2022",
       "id": 1
     },
     {
@@ -304,7 +364,7 @@
       "personalization": "trish",
       "complete": true,
       "claimed": true,
-      "dateCompleted": "Tuesday, Sep 20, 2022",
+      "dateCompleted": "Wednesday, Sep 21, 2022",
       "id": 7
     },
     {
@@ -313,21 +373,120 @@
       "tumblerSizeId": 5,
       "glitterColorId": 2,
       "personalization": "kate",
-      "complete": false,
-      "claimed": false,
-      "dateCompleted": "",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Tuesday, Sep 20, 2022",
       "id": 8
     },
     {
-      "customerId": null,
-      "description": "Leopard print ",
-      "tumblerSizeId": 3,
-      "glitterColorId": 2,
-      "personalization": "Sally",
+      "customerId": 10,
+      "description": "Leopard",
+      "tumblerSizeId": 4,
+      "glitterColorId": 4,
+      "personalization": "Lisa",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Wednesday, Sep 21, 2022",
+      "id": 9
+    },
+    {
+      "customerId": 12,
+      "description": "nfl team ",
+      "tumblerSizeId": 5,
+      "glitterColorId": 5,
+      "personalization": "Linda",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Wednesday, Sep 21, 2022",
+      "id": 12
+    },
+    {
+      "customerId": 1,
+      "description": "Baseball Mama",
+      "tumblerSizeId": 2,
+      "glitterColorId": 8,
+      "personalization": "Estelle",
       "complete": false,
       "claimed": false,
       "dateCompleted": "",
-      "id": 9
+      "id": 13
+    },
+    {
+      "customerId": 1,
+      "description": "Halloween design",
+      "tumblerSizeId": 4,
+      "glitterColorId": 6,
+      "personalization": "Lisa",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Oct 3, 2022",
+      "id": 14
+    },
+    {
+      "customerId": 1,
+      "description": "Baby shark ",
+      "tumblerSizeId": 6,
+      "glitterColorId": 2,
+      "personalization": "Lilly",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Tuesday, Oct 4, 2022",
+      "id": 16
+    },
+    {
+      "customerId": 13,
+      "description": "Blessed Mama bear ",
+      "tumblerSizeId": 3,
+      "glitterColorId": 7,
+      "personalization": "Haylee",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Oct 3, 2022",
+      "id": 17
+    },
+    {
+      "customerId": 1,
+      "description": "Blessed Mama Bear",
+      "tumblerSizeId": 3,
+      "glitterColorId": 8,
+      "personalization": "Ty",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Oct 3, 2022",
+      "id": 19
+    },
+    {
+      "customerId": 1,
+      "description": "Floral Mama Bear ",
+      "tumblerSizeId": 2,
+      "glitterColorId": 5,
+      "personalization": "Hailey",
+      "complete": false,
+      "claimed": false,
+      "dateCompleted": "",
+      "id": 20
+    },
+    {
+      "customerId": 1,
+      "description": "NFL design",
+      "tumblerSizeId": 4,
+      "glitterColorId": 5,
+      "personalization": "Estelle",
+      "complete": false,
+      "claimed": false,
+      "dateCompleted": "",
+      "id": 21
+    },
+    {
+      "customerId": 1,
+      "description": "Baseball Mama",
+      "tumblerSizeId": 4,
+      "glitterColorId": 1,
+      "personalization": "Estelle",
+      "complete": false,
+      "claimed": false,
+      "dateCompleted": "",
+      "id": 22
     }
   ]
 }
