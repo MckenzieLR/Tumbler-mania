@@ -102,7 +102,7 @@ export const HomePage = () => {
                     <img src={blessedmama} alt="Blessed Mama Bear" />
                   </div>
                   <div className="back" onClick={() => setFlip("")}>
-                    30 oz Curve "Blessed Mama" Bear with baby bear(s)
+                    30 oz Curve "Blessed Mama" Bear with baby bear(s) 
                   </div>
                 </div>
                 <div id="tumbler--2" className={`card ${flip === "tumbler--2" ? "flip" : ""}`}>
