@@ -29,7 +29,7 @@ export const OrderList = () => {
     const [customer, setCustomers] = useState([{}])
 
     const getAllOrders = () => {
-        fetch(`http://localhost:8088/customerOrders?_embed=employeeTickets`)
+        fetch(`https://tumbler-mania-db.herokuapp.com/customerOrders?_embed=employeeTickets`)
         .then(response => response.json())
         .then((orderArray) => {
             setOrders(orderArray)
@@ -39,7 +39,7 @@ export const OrderList = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/customers?userId=${tumblerUserObject.id}`)
+            fetch(`https://tumbler-mania-db.herokuapp.com/customers?userId=${tumblerUserObject.id}`)
             .then(res => res.json())
             .then((customerArray) => {
                 setCustomers(customerArray)
@@ -47,7 +47,7 @@ export const OrderList = () => {
 
           getAllOrders()
 
-            fetch(`http://localhost:8088/employees?_expand=user`)
+            fetch(`https://tumbler-mania-db.herokuapp.com/employees?_expand=user`)
             .then(response => response.json())
             .then((employeeArray) => {
                 setEmployees(employeeArray)

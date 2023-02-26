@@ -23,7 +23,7 @@ export const EditOrderForm = () => {
 
     // TODO: Get employee account info from API and update state
     useEffect(() => {
-        fetch(`http://localhost:8088/customerOrders?id=${orderId}`)
+        fetch(`https://tumbler-mania-db.herokuapp.com/customerOrders?id=${orderId}`)
             .then(response => response.json())
             .then((data) => {
                 const orderObject = data[0]
@@ -46,7 +46,7 @@ useEffect(() => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
-       return fetch(`http://localhost:8088/customerOrders/${order.id}`, {
+       return fetch(`https://tumbler-mania-db.herokuapp.com/customerOrders/${order.id}`, {
            method: "PUT",
            headers: {
                "Content-Type": "application/json"

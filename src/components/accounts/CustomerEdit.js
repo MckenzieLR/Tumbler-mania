@@ -20,7 +20,7 @@ export const CustomerForm = () => {
 
     // TODO: Get employee account info from API and update state
     useEffect(() => {
-        fetch(`http://localhost:8088/customers?userId=${tumblerUserObject.id}`)
+        fetch(`https://tumbler-mania-db.herokuapp.com/customers?userId=${tumblerUserObject.id}`)
             .then(response => response.json())
             .then((data) => {
                 const customerObject = data[0]
@@ -41,7 +41,7 @@ useEffect(() => {
     const handleSaveButtonClick = (event) => {
         event.preventDefault()
 
-       return fetch(`http://localhost:8088/customers/${account.id}`, {
+       return fetch(`https://tumbler-mania-db.herokuapp.com/customers/${account.id}`, {
            method: "PUT",
            headers: {
                "Content-Type": "application/json"

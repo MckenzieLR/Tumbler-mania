@@ -38,7 +38,7 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
             dateCompleted: ""
         }
 
-        return fetch(`http://localhost:8088/customerOrders/${orderObject.id}`, {
+        return fetch(`https://tumbler-mania-db.herokuapp.com/customerOrders/${orderObject.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -71,7 +71,7 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
             dateCompleted: new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})
         }
 
-        return fetch(`http://localhost:8088/customerOrders/${orderObject.id}`, {
+        return fetch(`https://tumbler-mania-db.herokuapp.com/customerOrders/${orderObject.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -85,7 +85,7 @@ export const Order = ( {orderObject, currentUser, employees, getAllOrders} ) => 
     const deleteButton = () => {
         if(currentUser.staff &&  orderObject.dateCompleted === ""){
         return <button onClick ={() => {
-            fetch(`http://localhost:8088/customerOrders/${orderObject.id}`, {
+            fetch(`https://tumbler-mania-db.herokuapp.com/customerOrders/${orderObject.id}`, {
                 method: "DELETE"
             })
             .then(() => getAllOrders() )

@@ -12,7 +12,7 @@ export const CustomerProfile = () =>{
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/customers?_expand=user&userId=${tumblerUserObject.id}`)
+            fetch(`https://tumbler-mania-db.herokuapp.com/customers?_expand=user&userId=${tumblerUserObject.id}`)
             .then(response => response.json())
             .then((data) => {
                 const singleCustomer = data[0]

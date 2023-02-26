@@ -8,7 +8,7 @@ export const CustomerList = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/customers?_expand=user`)
+            fetch(`https://tumbler-mania-db.herokuapp.com/customers?_expand=user`)
             .then(response => response.json())
             .then((customerArray) => {
                 setCustomers(customerArray)

@@ -11,7 +11,7 @@ export const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        return fetch(`http://localhost:8088/users?email=${email}&_embed=customers`)
+        return fetch(`https://tumbler-mania-db.herokuapp.com/users?email=${email}&_embed=customers`)
             .then(res => res.json())
             .then(foundUsers => {
                 if (foundUsers.length === 1) {

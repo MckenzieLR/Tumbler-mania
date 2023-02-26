@@ -41,7 +41,7 @@ export const OrderForm = () => {
     }
 
         // TODO: Perform the fetch() to POST the object to the API
-        return fetch(`http://localhost:8088/customerOrders`, {
+        return fetch(`https://tumbler-mania-db.herokuapp.com/customerOrders`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -58,7 +58,7 @@ export const OrderForm = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/customers?userId=${tumblerUserObject.id}`)
+            fetch(`https://tumbler-mania-db.herokuapp.com/customers?userId=${tumblerUserObject.id}`)
             .then(res => res.json())
             .then((customerArray) => {
                 setCustomers(customerArray)
@@ -83,7 +83,7 @@ export const OrderForm = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/glitterColors`)
+            fetch(`https://tumbler-mania-db.herokuapp.com/glitterColors`)
             .then(res => res.json())
             .then((colorArray) => {
                 setColors(colorArray)
@@ -95,7 +95,7 @@ export const OrderForm = () => {
 
     useEffect(
         () => {
-            fetch(`http://localhost:8088/tumblerSizes`)
+            fetch(`https://tumbler-mania-db.herokuapp.com/tumblerSizes`)
             .then(res => res.json())
             .then((sizeArray) => {
                 setSizes(sizeArray)
