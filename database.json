@@ -89,6 +89,12 @@
       "fullName": "Kenzie",
       "isStaff": false,
       "id": 15
+    },
+    {
+      "email": "mck@email.com",
+      "fullName": "Mckenzie",
+      "isStaff": false,
+      "id": 16
     }
   ],
   "customers": [
@@ -175,6 +181,12 @@
       "address": "2739 93rd ave ",
       "phoneNumber": "387-383-4839",
       "id": 14
+    },
+    {
+      "userId": 16,
+      "address": "68329",
+      "phoneNumber": "43264342",
+      "id": 15
     }
   ],
   "employees": [
