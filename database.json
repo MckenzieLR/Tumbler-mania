@@ -1,0 +1,504 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Darion Effertz",
+      "email": "deffertz@yahoo.com",
+      "isStaff": false
+    },
+    {
+      "id": 2,
+      "fullName": "Estelle Corwin",
+      "email": "estellec@gmail.com",
+      "isStaff": false
+    },
+    {
+      "id": 3,
+      "fullName": "Lenny Franecki",
+      "email": "lennyfran@gmail.com",
+      "isStaff": false
+    },
+    {
+      "id": 4,
+      "fullName": "Jillian Kub",
+      "email": "jillkub@yahoo.com",
+      "isStaff": false
+    },
+    {
+      "id": 5,
+      "fullName": "Wilson Torphy",
+      "email": "wilsontorph@yahoo.com",
+      "isStaff": false
+    },
+    {
+      "id": 6,
+      "fullName": "Maya Russel",
+      "email": "mrussel@gmail.com",
+      "isStaff": false
+    },
+    {
+      "email": "danmayert@yahoo.com",
+      "fullName": "Dannie Mayert",
+      "isStaff": false,
+      "id": 7
+    },
+    {
+      "id": 8,
+      "fullName": "Mckenzie Rondeau",
+      "email": "kenzie@gmail.com",
+      "isStaff": true
+    },
+    {
+      "email": "thertz@yahoo.com",
+      "fullName": "Tricia Hertz",
+      "isStaff": false,
+      "id": 9
+    },
+    {
+      "email": "sallyS@yahoo.com",
+      "fullName": "Sally Sue",
+      "isStaff": false,
+      "id": 10
+    },
+    {
+      "email": "lisa@gmail.com",
+      "fullName": "Lisa",
+      "isStaff": false,
+      "id": 11
+    },
+    {
+      "email": "kyoung@yahoo.com",
+      "fullName": "Kate Young",
+      "isStaff": false,
+      "id": 12
+    },
+    {
+      "email": "kherd@yahoo.com",
+      "fullName": "Keith herd",
+      "isStaff": false,
+      "id": 13
+    },
+    {
+      "email": "htrotter@gmail.com",
+      "fullName": "Haylee Trotter",
+      "isStaff": false,
+      "id": 14
+    },
+    {
+      "email": "kenz@gmail.com",
+      "fullName": "Kenzie",
+      "isStaff": false,
+      "id": 15
+    },
+    {
+      "email": "mck@email.com",
+      "fullName": "Mckenzie",
+      "isStaff": false,
+      "id": 16
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "address": "06146 Aracely Roads, GA 12986-7742",
+      "phoneNumber": "872-485-8589",
+      "userId": 2
+    },
+    {
+      "id": 2,
+      "address": "611 Arnoldo Key, AZ 82253-8001",
+      "phoneNumber": "449-696-6577",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "address": "41871 Lindgren Place, AR 45561-5232",
+      "phoneNumber": "229-509-7493",
+      "userId": 3
+    },
+    {
+      "id": 4,
+      "address": "43409 Ziemann Trail, IA, 80200",
+      "phoneNumber": "371-241-8425",
+      "userId": 7
+    },
+    {
+      "id": 5,
+      "address": "672 Kertzmann Street, VA 58740-4609",
+      "phoneNumber": "598-755-6147",
+      "userId": 5
+    },
+    {
+      "id": 6,
+      "address": "7967 Jackeline Ridge, AZ 04600",
+      "phoneNumber": "799-784-5653",
+      "userId": 6
+    },
+    {
+      "id": 7,
+      "address": "28962 Langworth Summit, AZ 05571-1338",
+      "phoneNumber": "522-579-7997",
+      "userId": 4
+    },
+    {
+      "userId": 9,
+      "address": "3784 26th ave",
+      "phoneNumber": "374-484-2849",
+      "id": 8
+    },
+    {
+      "userId": 10,
+      "address": "837 2nd ave",
+      "phoneNumber": "243-558-3847",
+      "id": 9
+    },
+    {
+      "userId": 11,
+      "address": "2839 4th ave s ",
+      "phoneNumber": "483-948-3948",
+      "id": 10
+    },
+    {
+      "userId": 12,
+      "address": "8273 6th Ave ",
+      "phoneNumber": "837-282-8438",
+      "id": 11
+    },
+    {
+      "userId": 13,
+      "address": "368 36th Ave",
+      "phoneNumber": "374-383-4843",
+      "id": 12
+    },
+    {
+      "userId": 14,
+      "address": "393 43rd Ave N",
+      "phoneNumber": "284-294-3938",
+      "id": 13
+    },
+    {
+      "userId": 15,
+      "address": "2739 93rd ave ",
+      "phoneNumber": "387-383-4839",
+      "id": 14
+    },
+    {
+      "userId": 16,
+      "address": "68329",
+      "phoneNumber": "43264342",
+      "id": 15
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "userId": 8
+    }
+  ],
+  "tumblerSizes": [
+    {
+      "id": 1,
+      "size": "20 oz",
+      "style": "curve",
+      "sublimation": false
+    },
+    {
+      "id": 2,
+      "size": "20 oz",
+      "style": "skinny",
+      "sublimation": false
+    },
+    {
+      "id": 3,
+      "size": "30 oz",
+      "style": "curve",
+      "sublimation": false
+    },
+    {
+      "id": 4,
+      "size": "30 oz",
+      "style": "skinny",
+      "sublimation": false
+    },
+    {
+      "id": 5,
+      "size": "12 oz",
+      "style": "sippy",
+      "sublimation": false
+    },
+    {
+      "id": 6,
+      "size": "15 oz",
+      "style": "skinny",
+      "sublimation": false
+    },
+    {
+      "id": 7,
+      "size": "12 oz",
+      "style": "sippy",
+      "sublimation": true
+    },
+    {
+      "id": 8,
+      "size": "20 oz",
+      "style": "skinny",
+      "sublimation": true
+    }
+  ],
+  "glitterColors": [
+    {
+      "id": 1,
+      "color": "White",
+      "type": "fine"
+    },
+    {
+      "id": 2,
+      "color": "Cotton Candy",
+      "type": "fine"
+    },
+    {
+      "id": 3,
+      "color": "Hot Pink",
+      "type": "fine"
+    },
+    {
+      "id": 4,
+      "color": "Midnight",
+      "type": "fine"
+    },
+    {
+      "id": 5,
+      "color": "Royal Blue",
+      "type": "fine"
+    },
+    {
+      "id": 6,
+      "color": "Orange",
+      "type": "fine"
+    },
+    {
+      "id": 7,
+      "color": "Purple",
+      "type": "fine"
+    },
+    {
+      "id": 8,
+      "color": "Gold",
+      "type": "fine"
+    },
+    {
+      "id": 9,
+      "color": "Silver",
+      "type": "fine"
+    },
+    {
+      "id": 10,
+      "color": "Maroon",
+      "type": "fine"
+    },
+    {
+      "id": 11,
+      "color": "Hot Pink",
+      "type": "chunky"
+    },
+    {
+      "id": 12,
+      "color": "Silver",
+      "type": "chunky"
+    },
+    {
+      "id": 13,
+      "color": "Gold",
+      "type": "chunky"
+    }
+  ],
+  "customerOrders": [
+    {
+      "customerId": 1,
+      "description": "Red Leopard Full",
+      "tumblerSizeId": 4,
+      "glitterColorId": 6,
+      "personalization": "Marie",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Oct 3, 2022",
+      "id": 1
+    },
+    {
+      "customerId": 1,
+      "description": "Teacher pencil design",
+      "tumblerSizeId": 3,
+      "glitterColorId": 5,
+      "personalization": "Miss. Turner",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "2022-09-16T20:25:47.565Z",
+      "id": 2
+    },
+    {
+      "customerId": 5,
+      "description": "Dallas Cowboys ",
+      "tumblerSizeId": 2,
+      "glitterColorId": 5,
+      "personalization": "Jesse",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Sep 19, 2022",
+      "id": 3
+    },
+    {
+      "customerId": 1,
+      "description": "CoComelon",
+      "tumblerSizeId": 5,
+      "glitterColorId": 1,
+      "personalization": "Addy",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Sep 19, 2022",
+      "id": 4
+    },
+    {
+      "customerId": 1,
+      "description": "Teacher Design with apple",
+      "tumblerSizeId": 2,
+      "glitterColorId": 12,
+      "personalization": "Ms. Kep",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Tuesday, Sep 20, 2022",
+      "id": 6
+    },
+    {
+      "customerId": 8,
+      "description": "mama bear",
+      "tumblerSizeId": 3,
+      "glitterColorId": 5,
+      "personalization": "trish",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Wednesday, Sep 21, 2022",
+      "id": 7
+    },
+    {
+      "customerId": 8,
+      "description": "cocomelon",
+      "tumblerSizeId": 5,
+      "glitterColorId": 2,
+      "personalization": "kate",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Tuesday, Sep 20, 2022",
+      "id": 8
+    },
+    {
+      "customerId": 10,
+      "description": "Leopard",
+      "tumblerSizeId": 4,
+      "glitterColorId": 4,
+      "personalization": "Lisa",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Wednesday, Sep 21, 2022",
+      "id": 9
+    },
+    {
+      "customerId": 12,
+      "description": "nfl team ",
+      "tumblerSizeId": 5,
+      "glitterColorId": 5,
+      "personalization": "Linda",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Wednesday, Sep 21, 2022",
+      "id": 12
+    },
+    {
+      "customerId": 1,
+      "description": "Baseball Mama",
+      "tumblerSizeId": 2,
+      "glitterColorId": 8,
+      "personalization": "Estelle",
+      "complete": false,
+      "claimed": false,
+      "dateCompleted": "",
+      "id": 13
+    },
+    {
+      "customerId": 1,
+      "description": "Halloween design",
+      "tumblerSizeId": 4,
+      "glitterColorId": 6,
+      "personalization": "Lisa",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Oct 3, 2022",
+      "id": 14
+    },
+    {
+      "customerId": 1,
+      "description": "Baby shark ",
+      "tumblerSizeId": 6,
+      "glitterColorId": 2,
+      "personalization": "Lilly",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Tuesday, Oct 4, 2022",
+      "id": 16
+    },
+    {
+      "customerId": 13,
+      "description": "Blessed Mama bear ",
+      "tumblerSizeId": 3,
+      "glitterColorId": 7,
+      "personalization": "Haylee",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Oct 3, 2022",
+      "id": 17
+    },
+    {
+      "customerId": 1,
+      "description": "Blessed Mama Bear",
+      "tumblerSizeId": 3,
+      "glitterColorId": 8,
+      "personalization": "Ty",
+      "complete": true,
+      "claimed": true,
+      "dateCompleted": "Monday, Oct 3, 2022",
+      "id": 19
+    },
+    {
+      "customerId": 1,
+      "description": "Floral Mama Bear ",
+      "tumblerSizeId": 2,
+      "glitterColorId": 5,
+      "personalization": "Hailey",
+      "complete": false,
+      "claimed": false,
+      "dateCompleted": "",
+      "id": 20
+    },
+    {
+      "customerId": 1,
+      "description": "NFL design",
+      "tumblerSizeId": 4,
+      "glitterColorId": 5,
+      "personalization": "Estelle",
+      "complete": false,
+      "claimed": false,
+      "dateCompleted": "",
+      "id": 21
+    },
+    {
+      "customerId": 1,
+      "description": "Baseball Mama",
+      "tumblerSizeId": 4,
+      "glitterColorId": 1,
+      "personalization": "Estelle",
+      "complete": false,
+      "claimed": false,
+      "dateCompleted": "",
+      "id": 22
+    }
+  ]
+}
